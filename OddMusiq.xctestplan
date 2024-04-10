@@ -39,6 +39,13 @@
         "identifier" : "UseCasesTests",
         "name" : "UseCasesTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:OddMusiq\/Data",
+        "identifier" : "RepositoriesTests",
+        "name" : "RepositoriesTests"
+      }
     }
   ],
   "version" : 1

@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9ABD4F52BC67908003ACD19 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = OddMusiq/Data; sourceTree = "<group>"; };
 		F9BA66772BC588CE00EC7305 /* OddMusiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddMusiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqApp.swift; sourceTree = "<group>"; };
 		F9BA667C2BC588CE00EC7305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */,
+				F9ABD4F52BC67908003ACD19 /* Data */,
 				F9EFC3602BC66CBD00D5D7EA /* Domain */,
 				F9BA66792BC588CE00EC7305 /* OddMusiq */,
 				F9BA668B2BC588CF00EC7305 /* OddMusiqTests */,
