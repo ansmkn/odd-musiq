@@ -31,7 +31,7 @@ Focus on scalability. No dependencies
 - [ ] Domain Unit tests
 
 ### Project Infrastructure
-- [ ] SPM
+- [x] SPM
 - [ ] SPM plugin for decoding the resource file as argument from $SECRET
 - [ ] Platform iOS/macOS/ipadOS?
 - [ ] Distribution metadata as a code

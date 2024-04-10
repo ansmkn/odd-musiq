@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = F9080C432BC66A9F00B10C3A /* UseCases */; };
+		F9BA667B2BC588CE00EC7305 /* OddMusiqApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */; };
+		F9BA667D2BC588CE00EC7305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667C2BC588CE00EC7305 /* ContentView.swift */; };
+		F9BA667F2BC588CF00EC7305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BA667E2BC588CF00EC7305 /* Assets.xcassets */; };
+		F9BA66832BC588CF00EC7305 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BA66822BC588CF00EC7305 /* Preview Assets.xcassets */; };
+		F9BA668D2BC588CF00EC7305 /* OddMusiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA668C2BC588CF00EC7305 /* OddMusiqTests.swift */; };
+		F9BA66972BC588CF00EC7305 /* OddMusiqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA66962BC588CF00EC7305 /* OddMusiqUITests.swift */; };
+		F9BA66992BC588CF00EC7305 /* OddMusiqUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA66982BC588CF00EC7305 /* OddMusiqUITestsLaunchTests.swift */; };
+		F9EFC3632BC66E2600D5D7EA /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = F9EFC3622BC66E2600D5D7EA /* Entities */; };
+		F9EFC3652BC66E2600D5D7EA /* RepositoryProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = F9EFC3642BC66E2600D5D7EA /* RepositoryProtocol */; };
+		F9EFC3672BC66E2600D5D7EA /* UseCaseProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = F9EFC3662BC66E2600D5D7EA /* UseCaseProtocol */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9BA66892BC588CF00EC7305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9BA666F2BC588CE00EC7305 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9BA66762BC588CE00EC7305;
+			remoteInfo = OddMusiq;
+		};
+		F9BA66932BC588CF00EC7305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9BA666F2BC588CE00EC7305 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9BA66762BC588CE00EC7305;
+			remoteInfo = OddMusiq;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9BA66772BC588CE00EC7305 /* OddMusiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddMusiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqApp.swift; sourceTree = "<group>"; };
+		F9BA667C2BC588CE00EC7305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9BA667E2BC588CF00EC7305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9BA66802BC588CF00EC7305 /* OddMusiq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OddMusiq.entitlements; sourceTree = "<group>"; };
+		F9BA66822BC588CF00EC7305 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9BA66882BC588CF00EC7305 /* OddMusiqTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OddMusiqTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BA668C2BC588CF00EC7305 /* OddMusiqTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqTests.swift; sourceTree = "<group>"; };
+		F9BA66922BC588CF00EC7305 /* OddMusiqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OddMusiqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BA66962BC588CF00EC7305 /* OddMusiqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqUITests.swift; sourceTree = "<group>"; };
+		F9BA66982BC588CF00EC7305 /* OddMusiqUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9EFC3602BC66CBD00D5D7EA /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = OddMusiq/Domain; sourceTree = "<group>"; };
+		F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = OddMusiq.xctestplan; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9BA66742BC588CE00EC7305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */,
+				F9EFC3632BC66E2600D5D7EA /* Entities in Frameworks */,
+				F9EFC3672BC66E2600D5D7EA /* UseCaseProtocol in Frameworks */,
+				F9EFC3652BC66E2600D5D7EA /* RepositoryProtocol in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA66852BC588CF00EC7305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA668F2BC588CF00EC7305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9BA666E2BC588CE00EC7305 = {
+			isa = PBXGroup;
+			children = (
+				F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */,
+				F9EFC3602BC66CBD00D5D7EA /* Domain */,
+				F9BA66792BC588CE00EC7305 /* OddMusiq */,
+				F9BA668B2BC588CF00EC7305 /* OddMusiqTests */,
+				F9BA66952BC588CF00EC7305 /* OddMusiqUITests */,
+				F9BA66782BC588CE00EC7305 /* Products */,
+				F9EFC3612BC66E2600D5D7EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9BA66782BC588CE00EC7305 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9BA66772BC588CE00EC7305 /* OddMusiq.app */,
+				F9BA66882BC588CF00EC7305 /* OddMusiqTests.xctest */,
+				F9BA66922BC588CF00EC7305 /* OddMusiqUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9BA66792BC588CE00EC7305 /* OddMusiq */ = {
+			isa = PBXGroup;
+			children = (
+				F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */,
+				F9BA667C2BC588CE00EC7305 /* ContentView.swift */,
+				F9BA667E2BC588CF00EC7305 /* Assets.xcassets */,
+				F9BA66802BC588CF00EC7305 /* OddMusiq.entitlements */,
+				F9BA66812BC588CF00EC7305 /* Preview Content */,
+			);
+			path = OddMusiq;
+			sourceTree = "<group>";
+		};
+		F9BA66812BC588CF00EC7305 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F9BA66822BC588CF00EC7305 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9BA668B2BC588CF00EC7305 /* OddMusiqTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9BA668C2BC588CF00EC7305 /* OddMusiqTests.swift */,
+			);
+			path = OddMusiqTests;
+			sourceTree = "<group>";
+		};
+		F9BA66952BC588CF00EC7305 /* OddMusiqUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9BA66962BC588CF00EC7305 /* OddMusiqUITests.swift */,
+				F9BA66982BC588CF00EC7305 /* OddMusiqUITestsLaunchTests.swift */,
+			);
+			path = OddMusiqUITests;
+			sourceTree = "<group>";
+		};
+		F9EFC3612BC66E2600D5D7EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9BA66762BC588CE00EC7305 /* OddMusiq */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BA669C2BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiq" */;
+			buildPhases = (
+				F9BA66732BC588CE00EC7305 /* Sources */,
+				F9BA66742BC588CE00EC7305 /* Frameworks */,
+				F9BA66752BC588CE00EC7305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OddMusiq;
+			packageProductDependencies = (
+				F9080C432BC66A9F00B10C3A /* UseCases */,
+				F9EFC3622BC66E2600D5D7EA /* Entities */,
+				F9EFC3642BC66E2600D5D7EA /* RepositoryProtocol */,
+				F9EFC3662BC66E2600D5D7EA /* UseCaseProtocol */,
+			);
+			productName = OddMusiq;
+			productReference = F9BA66772BC588CE00EC7305 /* OddMusiq.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9BA66872BC588CF00EC7305 /* OddMusiqTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BA669F2BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiqTests" */;
+			buildPhases = (
+				F9BA66842BC588CF00EC7305 /* Sources */,
+				F9BA66852BC588CF00EC7305 /* Frameworks */,
+				F9BA66862BC588CF00EC7305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9BA668A2BC588CF00EC7305 /* PBXTargetDependency */,
+			);
+			name = OddMusiqTests;
+			productName = OddMusiqTests;
+			productReference = F9BA66882BC588CF00EC7305 /* OddMusiqTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9BA66912BC588CF00EC7305 /* OddMusiqUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BA66A22BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiqUITests" */;
+			buildPhases = (
+				F9BA668E2BC588CF00EC7305 /* Sources */,
+				F9BA668F2BC588CF00EC7305 /* Frameworks */,
+				F9BA66902BC588CF00EC7305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9BA66942BC588CF00EC7305 /* PBXTargetDependency */,
+			);
+			name = OddMusiqUITests;
+			productName = OddMusiqUITests;
+			productReference = F9BA66922BC588CF00EC7305 /* OddMusiqUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9BA666F2BC588CE00EC7305 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					F9BA66762BC588CE00EC7305 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					F9BA66872BC588CF00EC7305 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F9BA66762BC588CE00EC7305;
+					};
+					F9BA66912BC588CF00EC7305 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F9BA66762BC588CE00EC7305;
+					};
+				};
+			};
+			buildConfigurationList = F9BA66722BC588CE00EC7305 /* Build configuration list for PBXProject "OddMusiq" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9BA666E2BC588CE00EC7305;
+			packageReferences = (
+			);
+			productRefGroup = F9BA66782BC588CE00EC7305 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9BA66762BC588CE00EC7305 /* OddMusiq */,
+				F9BA66872BC588CF00EC7305 /* OddMusiqTests */,
+				F9BA66912BC588CF00EC7305 /* OddMusiqUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9BA66752BC588CE00EC7305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BA66832BC588CF00EC7305 /* Preview Assets.xcassets in Resources */,
+				F9BA667F2BC588CF00EC7305 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA66862BC588CF00EC7305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA66902BC588CF00EC7305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9BA66732BC588CE00EC7305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BA667D2BC588CE00EC7305 /* ContentView.swift in Sources */,
+				F9BA667B2BC588CE00EC7305 /* OddMusiqApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA66842BC588CF00EC7305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BA668D2BC588CF00EC7305 /* OddMusiqTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA668E2BC588CF00EC7305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BA66992BC588CF00EC7305 /* OddMusiqUITestsLaunchTests.swift in Sources */,
+				F9BA66972BC588CF00EC7305 /* OddMusiqUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9BA668A2BC588CF00EC7305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9BA66762BC588CE00EC7305 /* OddMusiq */;
+			targetProxy = F9BA66892BC588CF00EC7305 /* PBXContainerItemProxy */;
+		};
+		F9BA66942BC588CF00EC7305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9BA66762BC588CE00EC7305 /* OddMusiq */;
+			targetProxy = F9BA66932BC588CF00EC7305 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9BA669A2BC588CF00EC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9BA669B2BC588CF00EC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F9BA669D2BC588CF00EC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OddMusiq/OddMusiq.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OddMusiq/Preview Content\"";
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiq;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9BA669E2BC588CF00EC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OddMusiq/OddMusiq.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"OddMusiq/Preview Content\"";
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiq;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9BA66A02BC588CF00EC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiqTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OddMusiq.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OddMusiq";
+			};
+			name = Debug;
+		};
+		F9BA66A12BC588CF00EC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiqTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OddMusiq.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OddMusiq";
+			};
+			name = Release;
+		};
+		F9BA66A32BC588CF00EC7305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiqUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OddMusiq;
+			};
+			name = Debug;
+		};
+		F9BA66A42BC588CF00EC7305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZSAGBKF3FW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.sea.OddMusiqUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OddMusiq;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9BA66722BC588CE00EC7305 /* Build configuration list for PBXProject "OddMusiq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BA669A2BC588CF00EC7305 /* Debug */,
+				F9BA669B2BC588CF00EC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BA669C2BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BA669D2BC588CF00EC7305 /* Debug */,
+				F9BA669E2BC588CF00EC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BA669F2BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiqTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BA66A02BC588CF00EC7305 /* Debug */,
+				F9BA66A12BC588CF00EC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BA66A22BC588CF00EC7305 /* Build configuration list for PBXNativeTarget "OddMusiqUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BA66A32BC588CF00EC7305 /* Debug */,
+				F9BA66A42BC588CF00EC7305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9080C432BC66A9F00B10C3A /* UseCases */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCases;
+		};
+		F9EFC3622BC66E2600D5D7EA /* Entities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Entities;
+		};
+		F9EFC3642BC66E2600D5D7EA /* RepositoryProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RepositoryProtocol;
+		};
+		F9EFC3662BC66E2600D5D7EA /* UseCaseProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UseCaseProtocol;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F9BA666F2BC588CE00EC7305 /* Project object */;
+}

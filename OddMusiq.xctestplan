@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "4C56AB13-2546-4A17-97BA-1E525C838EF8",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:OddMusiq.xcodeproj",
+      "identifier" : "F9BA66762BC588CE00EC7305",
+      "name" : "OddMusiq"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:OddMusiq.xcodeproj",
+        "identifier" : "F9BA66872BC588CF00EC7305",
+        "name" : "OddMusiqTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:OddMusiq.xcodeproj",
+        "identifier" : "F9BA66912BC588CF00EC7305",
+        "name" : "OddMusiqUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:OddMusiq\/Domain",
+        "identifier" : "UseCasesTests",
+        "name" : "UseCasesTests"
+      }
+    }
+  ],
+  "version" : 1
+}
