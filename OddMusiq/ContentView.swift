@@ -13,7 +13,7 @@ import FeatureToggles
 final class ContentViewModel {
     var songsUseCase: SongsUseCase!
     
-    var featureToggles: FeatureToggles = .analytics
+    var isAnalyticsEnabled: Bool = FeatureToggles.analytics.isEnabled
     
     func songs() async throws -> [Song] {
         fatalError()
@@ -22,12 +22,15 @@ final class ContentViewModel {
 
 struct ContentView: View {
     
+    var viewModel: ContentViewModel = ContentViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Text("is analytics enabled: \(viewModel.isAnalyticsEnabled)")
         }
         .padding()
     }

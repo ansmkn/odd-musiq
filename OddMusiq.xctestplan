@@ -53,6 +53,13 @@
         "identifier" : "FeatureTogglesTests",
         "name" : "FeatureTogglesTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:OddMusiq\/Environment",
+        "identifier" : "EnvironmentTests",
+        "name" : "EnvironmentTests"
+      }
     }
   ],
   "version" : 1

@@ -9,12 +9,14 @@ let package = Package(
             targets: ["FeatureToggles"])
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
+        .package(name: "Environment", path: "../Environment")
     ],
     targets: [
         .target(
             name: "FeatureToggles",
-            dependencies: []
+            dependencies: [
+                .product(name: "Environment", package: "Environment"),
+            ]
         ),
         .testTarget(
             name: "FeatureTogglesTests",

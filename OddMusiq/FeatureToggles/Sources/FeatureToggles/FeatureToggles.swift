@@ -1,6 +1,6 @@
 import Foundation
 
-public enum FeatureToggles {
+public enum FeatureToggles: String {
     case backgroundDownloading
     case partialDownloading
     case modernUI
@@ -11,3 +11,4 @@ public enum FeatureToggles {
     case songDetail
     case localization
 }
+
