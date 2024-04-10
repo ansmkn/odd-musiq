@@ -3,7 +3,7 @@ import Entities
 import RepositoryProtocol
 import UseCaseProtocol
 
-public class SongsUseCase: SongsUseCaseProtocol {
+public final class SongsUseCase: SongsUseCaseProtocol {
 
     private let repository: SongsRepositoryProtocol
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = F9080C432BC66A9F00B10C3A /* UseCases */; };
+		F9ABD4F82BC683E2003ACD19 /* FeatureToggles in Frameworks */ = {isa = PBXBuildFile; productRef = F9ABD4F72BC683E2003ACD19 /* FeatureToggles */; };
+		F9ABD4FA2BC683E7003ACD19 /* Repositories in Frameworks */ = {isa = PBXBuildFile; productRef = F9ABD4F92BC683E7003ACD19 /* Repositories */; };
 		F9BA667B2BC588CE00EC7305 /* OddMusiqApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */; };
 		F9BA667D2BC588CE00EC7305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667C2BC588CE00EC7305 /* ContentView.swift */; };
 		F9BA667F2BC588CF00EC7305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BA667E2BC588CF00EC7305 /* Assets.xcassets */; };
@@ -39,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		F9ABD4F52BC67908003ACD19 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = OddMusiq/Data; sourceTree = "<group>"; };
+		F9ABD4F62BC682A0003ACD19 /* FeatureToggles */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FeatureToggles; path = OddMusiq/FeatureToggles; sourceTree = "<group>"; };
 		F9BA66772BC588CE00EC7305 /* OddMusiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddMusiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BA667A2BC588CE00EC7305 /* OddMusiqApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddMusiqApp.swift; sourceTree = "<group>"; };
 		F9BA667C2BC588CE00EC7305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,10 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ABD4FA2BC683E7003ACD19 /* Repositories in Frameworks */,
 				F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */,
 				F9EFC3632BC66E2600D5D7EA /* Entities in Frameworks */,
 				F9EFC3672BC66E2600D5D7EA /* UseCaseProtocol in Frameworks */,
 				F9EFC3652BC66E2600D5D7EA /* RepositoryProtocol in Frameworks */,
+				F9ABD4F82BC683E2003ACD19 /* FeatureToggles in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */,
+				F9ABD4F62BC682A0003ACD19 /* FeatureToggles */,
 				F9ABD4F52BC67908003ACD19 /* Data */,
 				F9EFC3602BC66CBD00D5D7EA /* Domain */,
 				F9BA66792BC588CE00EC7305 /* OddMusiq */,
@@ -172,6 +178,8 @@
 				F9EFC3622BC66E2600D5D7EA /* Entities */,
 				F9EFC3642BC66E2600D5D7EA /* RepositoryProtocol */,
 				F9EFC3662BC66E2600D5D7EA /* UseCaseProtocol */,
+				F9ABD4F72BC683E2003ACD19 /* FeatureToggles */,
+				F9ABD4F92BC683E7003ACD19 /* Repositories */,
 			);
 			productName = OddMusiq;
 			productReference = F9BA66772BC588CE00EC7305 /* OddMusiq.app */;
@@ -652,6 +660,14 @@
 		F9080C432BC66A9F00B10C3A /* UseCases */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UseCases;
+		};
+		F9ABD4F72BC683E2003ACD19 /* FeatureToggles */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FeatureToggles;
+		};
+		F9ABD4F92BC683E7003ACD19 /* Repositories */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Repositories;
 		};
 		F9EFC3622BC66E2600D5D7EA /* Entities */ = {
 			isa = XCSwiftPackageProductDependency;

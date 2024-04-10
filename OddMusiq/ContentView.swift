@@ -8,9 +8,12 @@
 import SwiftUI
 import Entities
 import UseCases
+import FeatureToggles
 
-class ContentViewModel {
+final class ContentViewModel {
     var songsUseCase: SongsUseCase!
+    
+    var featureToggles: FeatureToggles = .analytics
     
     func songs() async throws -> [Song] {
         fatalError()
