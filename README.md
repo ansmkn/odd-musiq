@@ -13,6 +13,7 @@ Focus on scalability. No dependencies
 - [ ] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
 - [ ] MetricKit
+- [ ] Song Detail Screen
 - [ ] Localization
 
 ### Achitecture Capabilities
@@ -29,6 +30,7 @@ Focus on scalability. No dependencies
 - [ ] Parsing different audio formats
 - [ ] Different persistent technics (disk/icloud/secured?)
 - [ ] Domain Unit tests
+- [ ] Coordinator Pattern
 
 ### Project Infrastructure
 - [x] SPM
