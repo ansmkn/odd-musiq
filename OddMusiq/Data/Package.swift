@@ -13,13 +13,15 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(name: "Domain", path: "../Domain")
+        .package(name: "Domain", path: "../Domain"),
+        .package(name: "Core", path: "../Core")
     ],
     targets: [
         .target(
             name: "Repositories",
             dependencies: [
                 .product(name: "Entities", package: "Domain"),
+                .product(name: "Container", package: "Core"),
                 .product(name: "RepositoryProtocol", package: "Domain")
             ]
         ),

@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		F981124E2BC687A50017DC17 /* Environment */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Environment; path = OddMusiq/Environment; sourceTree = "<group>"; };
+		F981124F2BC68EFF0017DC17 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = OddMusiq/Core; sourceTree = "<group>"; };
 		F9ABD4F52BC67908003ACD19 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = OddMusiq/Data; sourceTree = "<group>"; };
 		F9ABD4F62BC682A0003ACD19 /* FeatureToggles */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FeatureToggles; path = OddMusiq/FeatureToggles; sourceTree = "<group>"; };
 		F9BA66772BC588CE00EC7305 /* OddMusiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddMusiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */,
+				F981124F2BC68EFF0017DC17 /* Core */,
 				F981124E2BC687A50017DC17 /* Environment */,
 				F9ABD4F62BC682A0003ACD19 /* FeatureToggles */,
 				F9ABD4F52BC67908003ACD19 /* Data */,

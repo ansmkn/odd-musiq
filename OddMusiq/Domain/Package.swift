@@ -25,7 +25,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        
+        .package(name: "Core", path: "../Core")
     ],
     targets: [
         .target(
@@ -44,7 +44,8 @@ let package = Package(
             name: "UseCases",
             dependencies: [
                 "RepositoryProtocol",
-                "UseCaseProtocol"
+                "UseCaseProtocol",
+                .product(name: "Container", package: "Core")
             ]
         ),
         .testTarget(

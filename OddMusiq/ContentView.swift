@@ -1,19 +1,17 @@
-//
-//  ContentView.swift
-//  OddMusiq
-//
-//  Created by Alexandr Semakin on 09.04.2024.
-//
-
 import SwiftUI
 import Entities
-import UseCases
+import UseCaseProtocol
 import FeatureToggles
 
-final class ContentViewModel {
-    var songsUseCase: SongsUseCase!
+final class ContentViewModel: ObservableObject {
+    var songsUseCase: SongsUseCaseProtocol?
     
     var isAnalyticsEnabled: Bool = FeatureToggles.analytics.isEnabled
+    
+    @MainActor
+    init() {
+        songsUseCase = OddMusiqApp.appContainer.resolve(SongsUseCaseProtocol.self)
+    }
     
     func songs() async throws -> [Song] {
         fatalError()
@@ -22,6 +20,8 @@ final class ContentViewModel {
 
 struct ContentView: View {
     
+    @MainActor
+    @ObservedObject
     var viewModel: ContentViewModel = ContentViewModel()
     
     var body: some View {
@@ -31,6 +31,7 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             Text("is analytics enabled: \(viewModel.isAnalyticsEnabled)")
+            Text("assembly is resolved with: \(viewModel.songsUseCase != nil)")
         }
         .padding()
     }
