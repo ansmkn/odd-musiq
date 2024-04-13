@@ -6,7 +6,10 @@ let package = Package(
     products: [
         .library(
             name: "Environment",
-            targets: ["Environment"])
+            targets: ["Environment"]),
+        .library(
+            name: "FeatureToggles",
+            targets: ["FeatureToggles"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -15,6 +18,10 @@ let package = Package(
         .target(
             name: "Environment",
             dependencies: []
+        ),
+        .target(
+            name: "FeatureToggles",
+            dependencies: ["Environment"]
         ),
         .testTarget(
             name: "EnvironmentTests",

@@ -49,13 +49,6 @@
     },
     {
       "target" : {
-        "containerPath" : "container:OddMusiq\/FeatureToggles",
-        "identifier" : "FeatureTogglesTests",
-        "name" : "FeatureTogglesTests"
-      }
-    },
-    {
-      "target" : {
         "containerPath" : "container:OddMusiq\/Environment",
         "identifier" : "EnvironmentTests",
         "name" : "EnvironmentTests"

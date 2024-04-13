@@ -7,6 +7,12 @@ let package = Package(
         .library(
             name: "Container",
             targets: ["Container"]),
+        .library(
+            name: "Coordinator",
+            targets: ["Coordinator"]),
+        .library(
+            name: "Router",
+            targets: ["Router"]),
         .library(name: "ContainerTestUtils", targets: ["ContainerTestUtils"])
     ],
     dependencies: [
@@ -15,6 +21,14 @@ let package = Package(
     targets: [
         .target(
             name: "Container",
+            dependencies: []
+        ),
+        .target(
+            name: "Coordinator",
+            dependencies: []
+        ),
+        .target(
+            name: "Router",
             dependencies: []
         ),
         .target(

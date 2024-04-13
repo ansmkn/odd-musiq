@@ -6,11 +6,14 @@ public protocol ContainerAssembly {
 
 public class Assembler {
     public var container = Container()
+    public var assemblies: [ContainerAssembly]
     
-    public init() {}
+    public init(assemblies: [ContainerAssembly]) {
+        self.assemblies = assemblies
+    }
     
     @discardableResult
-    public func apply(assemblies: [ContainerAssembly]) -> Container {
+    public func register() -> Container {
         for assemble in assemblies {
             assemble.assemble(container: container)
         }

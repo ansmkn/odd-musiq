@@ -10,7 +10,7 @@ final class ContentViewModel: ObservableObject {
     
     @MainActor
     init() {
-        songsUseCase = OddMusiqApp.appContainer.resolve(SongsUseCaseProtocol.self)
+//        songsUseCase = OddMusiqApp.appContainer.resolve(SongsUseCaseProtocol.self)
     }
     
     func songs() async throws -> [Song] {
