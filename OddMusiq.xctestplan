@@ -32,27 +32,6 @@
         "identifier" : "F9BA66912BC588CF00EC7305",
         "name" : "OddMusiqUITests"
       }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:OddMusiq\/Domain",
-        "identifier" : "UseCasesTests",
-        "name" : "UseCasesTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:OddMusiq\/Data",
-        "identifier" : "RepositoriesTests",
-        "name" : "RepositoriesTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:OddMusiq\/Environment",
-        "identifier" : "EnvironmentTests",
-        "name" : "EnvironmentTests"
-      }
     }
   ],
   "version" : 1

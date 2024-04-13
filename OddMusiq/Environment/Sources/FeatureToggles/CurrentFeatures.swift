@@ -9,7 +9,7 @@ enum CurrentFeatures {
             return [
                 .analytics,
                 .authorization,
-                .modernUI
+//                .modernUI
             ]
         case .production:
             return []

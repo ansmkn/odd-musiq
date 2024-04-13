@@ -8,17 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = F9080C432BC66A9F00B10C3A /* UseCases */; };
-		F914554C2BCA6DFD005A9024 /* Router in Frameworks */ = {isa = PBXBuildFile; productRef = F914554B2BCA6DFD005A9024 /* Router */; };
-		F91455572BCA6EB6005A9024 /* Router+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91455562BCA6EB6005A9024 /* Router+UIKit.swift */; };
-		F91455592BCA6FA8005A9024 /* Router+Cocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91455582BCA6FA8005A9024 /* Router+Cocoa.swift */; };
+		F9618ADE2BCA93230003F5EE /* SongsList in Frameworks */ = {isa = PBXBuildFile; productRef = F9618ADD2BCA93230003F5EE /* SongsList */; };
 		F98112532BC847540017DC17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98112522BC847540017DC17 /* AppDelegate.swift */; };
 		F98112562BC91FF90017DC17 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98112552BC91FF90017DC17 /* AppCoordinator.swift */; };
-		F98112582BC920CB0017DC17 /* SongsList in Frameworks */ = {isa = PBXBuildFile; productRef = F98112572BC920CB0017DC17 /* SongsList */; };
 		F981125A2BC9213B0017DC17 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98112592BC9213B0017DC17 /* AppAssembler.swift */; };
 		F98112962BC9C72E0017DC17 /* FeatureToggles in Frameworks */ = {isa = PBXBuildFile; productRef = F98112952BC9C72E0017DC17 /* FeatureToggles */; };
 		F9ABD4FA2BC683E7003ACD19 /* Repositories in Frameworks */ = {isa = PBXBuildFile; productRef = F9ABD4F92BC683E7003ACD19 /* Repositories */; };
 		F9BA667B2BC588CE00EC7305 /* CocoaAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667A2BC588CE00EC7305 /* CocoaAppDelegate.swift */; };
-		F9BA667D2BC588CE00EC7305 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA667C2BC588CE00EC7305 /* ContentView.swift */; };
 		F9BA667F2BC588CF00EC7305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BA667E2BC588CF00EC7305 /* Assets.xcassets */; };
 		F9BA66832BC588CF00EC7305 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BA66822BC588CF00EC7305 /* Preview Assets.xcassets */; };
 		F9BA668D2BC588CF00EC7305 /* OddMusiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BA668C2BC588CF00EC7305 /* OddMusiqTests.swift */; };
@@ -47,19 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F91455562BCA6EB6005A9024 /* Router+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+UIKit.swift"; sourceTree = "<group>"; };
-		F91455582BCA6FA8005A9024 /* Router+Cocoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Cocoa.swift"; sourceTree = "<group>"; };
+		F9083C4A2BCA9D3B00D7D1DF /* Router */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Router; path = OddMusiq/Router; sourceTree = "<group>"; };
+		F911CC1C2BCA925C00B55A09 /* SongsList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SongsList; path = OddMusiq/SongsList; sourceTree = "<group>"; };
 		F981124E2BC687A50017DC17 /* Environment */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Environment; path = OddMusiq/Environment; sourceTree = "<group>"; };
 		F981124F2BC68EFF0017DC17 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Core; path = OddMusiq/Core; sourceTree = "<group>"; };
 		F98112522BC847540017DC17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F98112542BC91E310017DC17 /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Presentation; path = OddMusiq/Presentation; sourceTree = "<group>"; };
 		F98112552BC91FF90017DC17 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F98112592BC9213B0017DC17 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		F98112942BC92EF90017DC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F9ABD4F52BC67908003ACD19 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = OddMusiq/Data; sourceTree = "<group>"; };
 		F9BA66772BC588CE00EC7305 /* OddMusiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OddMusiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BA667A2BC588CE00EC7305 /* CocoaAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaAppDelegate.swift; sourceTree = "<group>"; };
-		F9BA667C2BC588CE00EC7305 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9BA667E2BC588CF00EC7305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9BA66802BC588CF00EC7305 /* OddMusiq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OddMusiq.entitlements; sourceTree = "<group>"; };
 		F9BA66822BC588CF00EC7305 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,8 +77,7 @@
 				F9EFC3632BC66E2600D5D7EA /* Entities in Frameworks */,
 				F9EFC3672BC66E2600D5D7EA /* UseCaseProtocol in Frameworks */,
 				F9EFC3652BC66E2600D5D7EA /* RepositoryProtocol in Frameworks */,
-				F98112582BC920CB0017DC17 /* SongsList in Frameworks */,
-				F914554C2BCA6DFD005A9024 /* Router in Frameworks */,
+				F9618ADE2BCA93230003F5EE /* SongsList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				F9EFC3682BC6704000D5D7EA /* OddMusiq.xctestplan */,
-				F98112542BC91E310017DC17 /* Presentation */,
+				F9083C4A2BCA9D3B00D7D1DF /* Router */,
+				F911CC1C2BCA925C00B55A09 /* SongsList */,
 				F981124F2BC68EFF0017DC17 /* Core */,
 				F981124E2BC687A50017DC17 /* Environment */,
 				F9ABD4F52BC67908003ACD19 /* Data */,
@@ -137,12 +131,9 @@
 			children = (
 				F98112942BC92EF90017DC17 /* Info.plist */,
 				F9BA667A2BC588CE00EC7305 /* CocoaAppDelegate.swift */,
-				F91455562BCA6EB6005A9024 /* Router+UIKit.swift */,
-				F91455582BCA6FA8005A9024 /* Router+Cocoa.swift */,
 				F98112552BC91FF90017DC17 /* AppCoordinator.swift */,
 				F98112592BC9213B0017DC17 /* AppAssembler.swift */,
 				F98112522BC847540017DC17 /* AppDelegate.swift */,
-				F9BA667C2BC588CE00EC7305 /* ContentView.swift */,
 				F9BA667E2BC588CF00EC7305 /* Assets.xcassets */,
 				F9BA66802BC588CF00EC7305 /* OddMusiq.entitlements */,
 				F9BA66812BC588CF00EC7305 /* Preview Content */,
@@ -204,9 +195,8 @@
 				F9EFC3642BC66E2600D5D7EA /* RepositoryProtocol */,
 				F9EFC3662BC66E2600D5D7EA /* UseCaseProtocol */,
 				F9ABD4F92BC683E7003ACD19 /* Repositories */,
-				F98112572BC920CB0017DC17 /* SongsList */,
 				F98112952BC9C72E0017DC17 /* FeatureToggles */,
-				F914554B2BCA6DFD005A9024 /* Router */,
+				F9618ADD2BCA93230003F5EE /* SongsList */,
 			);
 			productName = OddMusiq;
 			productReference = F9BA66772BC588CE00EC7305 /* OddMusiq.app */;
@@ -326,9 +316,6 @@
 			files = (
 				F98112562BC91FF90017DC17 /* AppCoordinator.swift in Sources */,
 				F98112532BC847540017DC17 /* AppDelegate.swift in Sources */,
-				F91455592BCA6FA8005A9024 /* Router+Cocoa.swift in Sources */,
-				F9BA667D2BC588CE00EC7305 /* ContentView.swift in Sources */,
-				F91455572BCA6EB6005A9024 /* Router+UIKit.swift in Sources */,
 				F981125A2BC9213B0017DC17 /* AppAssembler.swift in Sources */,
 				F9BA667B2BC588CE00EC7305 /* CocoaAppDelegate.swift in Sources */,
 			);
@@ -703,11 +690,7 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UseCases;
 		};
-		F914554B2BCA6DFD005A9024 /* Router */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Router;
-		};
-		F98112572BC920CB0017DC17 /* SongsList */ = {
+		F9618ADD2BCA93230003F5EE /* SongsList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SongsList;
 		};

@@ -16,7 +16,7 @@ public class SongsListCoordinator: Coordinator {
     }
     
     func showSongsList() {
-        let viewController: SongsListViewInput = container.resolve()!
-//        navigationController?.setViewControllers([viewController], animated: false)
+        let module: SongsListViewInput = container.resolve()!
+        router?.route(to: module)
     }
 }

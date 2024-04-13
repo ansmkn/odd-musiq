@@ -16,9 +16,13 @@ public class SongsListAssembly: ContainerAssembly {
                 SongsListViewHosting()
             }
         } else {
+            #if canImport(UIKit)
             container.register(SongsListViewInput.self) { _ in
                 SongsListViewController()
             }
+            #else
+            preconditionFailure("Legacy ui for macos is not supported")
+            #endif
         }
         
     }

@@ -3,7 +3,6 @@ import Coordinator
 import Repositories
 import UseCases
 import SongsList
-import UIKit
 import Router
 
 @MainActor class AppCoordinator: Coordinator {

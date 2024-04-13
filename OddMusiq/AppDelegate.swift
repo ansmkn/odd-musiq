@@ -1,4 +1,5 @@
 import SwiftUI
+import Router
 
 #if canImport(UIKit)
 import UIKit
@@ -8,7 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("Your code here")
         
         return true
     }
@@ -39,14 +39,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appCoordinator = AppCoordinator(router: UIKitRouter(navigationController: rootNavigationController))
         appCoordinator?.start()
-    }
-}
-
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .orange
     }
 }
 

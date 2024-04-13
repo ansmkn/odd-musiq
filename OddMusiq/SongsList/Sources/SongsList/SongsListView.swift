@@ -1,9 +1,13 @@
 import SwiftUI
-import UseCaseProtocol
-import Entities
+import Router
 
-struct SongsListViewHosting: SongsListViewInput {
-    
+class SongsListViewHosting: SongsListViewInput {
+}
+
+extension SongsListViewHosting: SwiftUIDestination {
+    func view() -> any View {
+        SongsListView()
+    }
 }
 
 final class SongsListViewModel: ObservableObject {
@@ -12,9 +16,9 @@ final class SongsListViewModel: ObservableObject {
     init() {
     }
     
-    func songs() async throws -> [Song] {
-        fatalError()
-    }
+//    func songs() async throws -> [Song] {
+//        fatalError()
+//    }
 }
 
 struct SongsListView: View {

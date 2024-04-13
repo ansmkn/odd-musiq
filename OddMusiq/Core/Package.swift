@@ -10,9 +10,6 @@ let package = Package(
         .library(
             name: "Coordinator",
             targets: ["Coordinator"]),
-        .library(
-            name: "Router",
-            targets: ["Router"]),
         .library(name: "ContainerTestUtils", targets: ["ContainerTestUtils"])
     ],
     dependencies: [
@@ -25,10 +22,6 @@ let package = Package(
         ),
         .target(
             name: "Coordinator",
-            dependencies: []
-        ),
-        .target(
-            name: "Router",
             dependencies: []
         ),
         .target(
