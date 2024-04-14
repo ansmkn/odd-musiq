@@ -23,6 +23,6 @@ final class SongsRepositoryTests: XCTestCase {
 
     func testDummyNetworkParsing() async throws {
         let lastSong = try await sut.songs().last!
-        XCTAssert(lastSong.audioURL.absoluteString.hasSuffix("RIyhvFO0L3WL84aGP"))
+        XCTAssert(lastSong.audioURL.absoluteString.hasSuffix("id=42"))
     }
 }
