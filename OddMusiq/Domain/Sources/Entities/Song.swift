@@ -2,7 +2,7 @@
 import Foundation
 
 public struct Song: Decodable {
-    var id: String
-    var title: String
-    var url: URL
+    public var id: String
+    public var name: String
+    public var audioURL: URL
 }

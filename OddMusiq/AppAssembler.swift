@@ -37,7 +37,7 @@ extension Assembler {
                 NetworkConfiguration(name: Environment.current.rawValue, baseURL: EnvironmentVariables.current.baseURL)
             }
 
-            container.register(NetworkService.self) { container in
+            container.register(NetworkServiceProtocol.self) { container in
                 NetworkService(configuration: container.resolve()!)
             }
         }

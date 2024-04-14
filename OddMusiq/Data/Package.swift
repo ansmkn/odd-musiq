@@ -10,6 +10,10 @@ let package = Package(
         .library(
             name: "Repositories",
             targets: ["Repositories"]
+        ),
+        .library(
+            name: "Dummy",
+            targets: ["Dummy"]
         )
     ],
     dependencies: [
@@ -27,10 +31,21 @@ let package = Package(
                 .product(name: "NetworkService", package: "Services"),
             ]
         ),
+        .target(
+            name: "Dummy",
+            dependencies: [
+                .product(name: "NetworkService", package: "Services")
+            ],
+            resources: [
+                .process("songs.json")
+            ]
+        ),
         .testTarget(
             name: "RepositoriesTests",
             dependencies: [
-                "Repositories"
+                "Repositories",
+                "Dummy",
+                .product(name: "Entities", package: "Domain"),
             ]
         )
     ]

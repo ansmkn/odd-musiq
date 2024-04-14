@@ -1,5 +1,9 @@
 import Foundation
 
+public protocol NetworkServiceProtocol {
+    func perform<T: APINetworkRequest>(query: T) async throws -> T.ResponseType
+}
+
 public struct NetworkConfiguration {
     public var name: String
     public var baseURL: URL
@@ -9,7 +13,7 @@ public struct NetworkConfiguration {
     }
 }
 
-public class NetworkService {
+public class NetworkService: NetworkServiceProtocol {
     var configuration: NetworkConfiguration
 //    var configuration: URLSessionConfiguration = .default
     var urlSession: URLSession = .shared
@@ -18,16 +22,16 @@ public class NetworkService {
         self.configuration = configuration
     }
     
-    public func perform<T: NetworkRequest>(query: T) async throws -> T.ResponseType {
+    public func perform<T: APINetworkRequest>(query: T) async throws -> T.ResponseType {
         let url = try query.makeURL(for: configuration)
         let request = URLRequest(url: url)
-        let (data, response) = try await urlSession.data(for: request)
+        let (data, _) = try await urlSession.data(for: request)
         let decoder = query.decoder()
         return try decoder.decode(T.ResponseType.self, from: data)
     }
 }
 
-public protocol NetworkRequest {
+public protocol APINetworkRequest {
     /// could be logged, hide sensive data
     associatedtype Query: CustomDebugStringConvertible
     associatedtype ResponseType: Decodable
@@ -36,7 +40,7 @@ public protocol NetworkRequest {
     func decoder() -> JSONDecoder
 }
 
-public extension NetworkRequest {
+public extension APINetworkRequest {
     func decoder() -> JSONDecoder {
         return JSONDecoder()
     }

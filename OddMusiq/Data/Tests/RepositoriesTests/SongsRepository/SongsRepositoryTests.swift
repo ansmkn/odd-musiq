@@ -1,17 +1,28 @@
 import XCTest
 @testable import Repositories
+import Dummy
+import Entities
 
 final class SongsRepositoryTests: XCTestCase {
+    
+    var dummyNetworkService: DummyNetworkService!
+    var sut: SongsRepository!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        dummyNetworkService = DummyNetworkService(mockResources: [
+            URL(string: "/Songs.json")!: DummyResource.songsResource
+        ])
+        sut = SongsRepository(networkService: dummyNetworkService)
     }
 
     override func tearDownWithError() throws {
+        dummyNetworkService = nil
+        sut = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        XCTAssertTrue(true)
+    func testDummyNetworkParsing() async throws {
+        let lastSong = try await sut.songs().last!
+        XCTAssert(lastSong.audioURL.absoluteString.hasSuffix("RIyhvFO0L3WL84aGP"))
     }
 }
