@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Data",
+    platforms: [.iOS(.v15), .macOS(.v13)],
     products: [
         .library(
             name: "Repositories",
@@ -13,7 +14,8 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Domain", path: "../Domain"),
-        .package(name: "Core", path: "../Core")
+        .package(name: "Core", path: "../Core"),
+        .package(name: "Services", path: "../Services"),
     ],
     targets: [
         .target(
@@ -21,7 +23,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Entities", package: "Domain"),
                 .product(name: "Container", package: "Core"),
-                .product(name: "RepositoryProtocol", package: "Domain")
+                .product(name: "RepositoryProtocol", package: "Domain"),
+                .product(name: "NetworkService", package: "Services"),
             ]
         ),
         .testTarget(

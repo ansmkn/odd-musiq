@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "SongsList",
-    platforms: [.iOS(.v15), .macOS(.v12)],
+    platforms: [.iOS(.v15), .macOS(.v13)],
     products: [
         .library(
             name: "SongsList",
@@ -12,7 +12,7 @@ let package = Package(
     dependencies: [
         .package(name: "Domain", path: "../Domain"),
         .package(name: "Core", path: "../Core"),
-        .package(name: "Router", path: "../Router")
+        .package(name: "Services", path: "../Services")
     ],
     targets: [
         .target(
@@ -20,7 +20,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Coordinator", package: "Core"),
                 .product(name: "Container", package: "Core"),
-                .product(name: "Router", package: "Router"),
+                .product(name: "Router", package: "Services"),
                 .product(name: "UseCaseProtocol", package: "Domain")
             ]
         ),

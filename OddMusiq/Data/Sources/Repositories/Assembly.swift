@@ -5,8 +5,8 @@ public class RepositoriesAssembly: ContainerAssembly {
     public init() { }
     
     public func assemble(container: Container) {
-        container.register(SongsRepositoryProtocol.self) { _ in
-            SongsRepository()
+        container.register(SongsRepositoryProtocol.self) { container in
+            SongsRepository(networkService: container.resolve()!)
         }
     }
 }

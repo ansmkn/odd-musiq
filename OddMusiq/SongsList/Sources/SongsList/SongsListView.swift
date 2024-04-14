@@ -11,6 +11,8 @@ extension SongsListViewHosting: SwiftUIDestination {
 }
 
 final class SongsListViewModel: ObservableObject {
+    
+    @Published var val: String = ""
 
     @MainActor
     init() {

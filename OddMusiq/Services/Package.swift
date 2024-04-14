@@ -2,12 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Router",
-    platforms: [.iOS(.v15), .macOS(.v12)],
+    name: "Services",
+    platforms: [.iOS(.v15), .macOS(.v13)],
     products: [
         .library(
             name: "Router",
-            targets: ["Router"])
+            targets: ["Router"]),
+        .library(
+            name: "NetworkService",
+            targets: ["NetworkService"])
     ],
     dependencies: [
     ],
@@ -16,6 +19,10 @@ let package = Package(
             name: "Router",
             dependencies: [
             ]
+        ),
+        .target(
+            name: "NetworkService",
+            dependencies: []
         ),
 //        .testTarget(
 //            name: "SongsListTests",
