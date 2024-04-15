@@ -1,5 +1,5 @@
 import Entities
 
 public protocol SongsUseCaseProtocol {
-    func execute() async throws -> [Song]
+    func execute(cached: Bool) async throws -> [Song]
 }

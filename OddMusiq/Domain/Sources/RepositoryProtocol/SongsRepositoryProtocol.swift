@@ -1,5 +1,5 @@
 import Entities
 
 public protocol SongsRepositoryProtocol {
-    func songs() async throws -> [Song]
+    func songs(onlyCached: Bool) async throws -> [Song]
 }

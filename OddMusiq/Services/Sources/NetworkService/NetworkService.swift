@@ -24,7 +24,10 @@ public class NetworkService: NetworkServiceProtocol {
     
     public func perform<T: APINetworkRequest>(query: T) async throws -> T.ResponseType {
         let url = try query.makeURL(for: configuration)
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        if let policy = query.cachePolicy() {
+            request.cachePolicy = policy.urlCachePolicy
+        }
         let (data, _) = try await urlSession.data(for: request)
         let decoder = query.decoder()
         return try decoder.decode(T.ResponseType.self, from: data)
@@ -38,16 +41,37 @@ public protocol APINetworkRequest {
     
     func makeURL(for configuration: NetworkConfiguration) throws -> URL
     func decoder() -> JSONDecoder
+    
+    /// If nil will be used protocolCachePolicy
+    func cachePolicy() -> NetworkCachePolicy?
 }
 
 public extension APINetworkRequest {
     func decoder() -> JSONDecoder {
-        return JSONDecoder()
+        JSONDecoder()
+    }
+    
+    func cachePolicy() -> NetworkCachePolicy? {
+        nil
     }
 }
 
 public struct EmptyQuery: CustomDebugStringConvertible {
     public var debugDescription: String {
         return ""
+    }
+}
+
+public enum NetworkCachePolicy {
+    case returnCacheDataDontLoad
+    case reloadRevalidatingCacheData
+    
+    var urlCachePolicy: URLRequest.CachePolicy {
+        switch self {
+        case .reloadRevalidatingCacheData:
+            return .reloadRevalidatingCacheData
+        case .returnCacheDataDontLoad:
+            return .returnCacheDataDontLoad
+        }
     }
 }

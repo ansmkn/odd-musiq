@@ -28,13 +28,18 @@ final class SongsListViewModel: ObservableObject {
         state = .loading
         Task { @MainActor in
             do {
-                let songs = try await songsUseCase.execute()
+                let cachedSongs = try await songsUseCase.execute(cached: true)
 //                try await Task.sleep(nanoseconds: 1_000_000_000)
-                self.items = songs.map { SongViewState(song: $0, status: .paused) }
+                self.items = cachedSongs.map { SongViewState(song: $0, status: .paused) }
                 state = .songs
-                try await Task.sleep(nanoseconds: 1_000_000_000)
+                
+                let updatedSongs = try await songsUseCase.execute(cached: false)
+                self.items = updatedSongs.map { SongViewState(song: $0, status: .unloaded) }
+                state = .songs
+                
+//                try await Task.sleep(nanoseconds: 1_000_000_000)
 //                self.items = songs.map { SongViewState(song: $0, status: .unloaded) }
-                self.items = songs.map { SongViewState(song: $0, status: .loading(0.4)) }
+//                self.items = songs.map { SongViewState(song: $0, status: .loading(0.4)) }
                 state = .songs
             } catch let error {
                 state = .error(error.localizedDescription)

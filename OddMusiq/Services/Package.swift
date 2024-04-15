@@ -10,7 +10,10 @@ let package = Package(
             targets: ["Router"]),
         .library(
             name: "NetworkService",
-            targets: ["NetworkService"])
+            targets: ["NetworkService"]),
+        .library(
+            name: "PresistenceService",
+            targets: ["PresistenceService"])
     ],
     dependencies: [
     ],
@@ -22,6 +25,10 @@ let package = Package(
         ),
         .target(
             name: "NetworkService",
+            dependencies: []
+        ),
+        .target(
+            name: "PresistenceService",
             dependencies: []
         ),
 //        .testTarget(

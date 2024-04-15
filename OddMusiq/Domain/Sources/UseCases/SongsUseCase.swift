@@ -11,7 +11,7 @@ final class SongsUseCase: SongsUseCaseProtocol {
         self.repository = repository
     }
 
-    public func execute() async throws -> [Song] {
-        try await repository.songs()
+    public func execute(cached: Bool) async throws -> [Song] {
+        try await repository.songs(onlyCached: cached)
     }
 }
