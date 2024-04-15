@@ -22,8 +22,11 @@ let package = Package(
                 .product(name: "Container", package: "Core"),
                 .product(name: "Router", package: "Services"),
                 .product(name: "UseCaseProtocol", package: "Domain")
+            ],
+            resources: [
+                .process("Resources")
             ]
-        ),
+        )
 //        .testTarget(
 //            name: "SongsListTests",
 //            dependencies: ["SongsList"]

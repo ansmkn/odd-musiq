@@ -1,4 +1,6 @@
 import SwiftUI
+import UseCaseProtocol
+import Entities
 import Router
 
 class SongsListViewHosting: SongsListViewInput {
@@ -10,24 +12,11 @@ extension SongsListViewHosting: SwiftUIDestination {
     }
 }
 
-final class SongsListViewModel: ObservableObject {
-    
-    @Published var val: String = ""
-
-    @MainActor
-    init() {
-    }
-    
-//    func songs() async throws -> [Song] {
-//        fatalError()
-//    }
-}
-
 struct SongsListView: View {
     
-    @MainActor
-    @ObservedObject
-    var viewModel: SongsListViewModel = SongsListViewModel()
+//    @MainActor
+//    @ObservedObject
+//    var viewModel: SongsListViewModel = SongsListViewModel()
     
     var body: some View {
         VStack {

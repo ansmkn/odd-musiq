@@ -18,7 +18,6 @@ import Router
     }
     
     func start() {
-        print("this is start point of the app")
         runSongListFlow()
     }
     
