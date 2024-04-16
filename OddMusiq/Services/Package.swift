@@ -13,7 +13,10 @@ let package = Package(
             targets: ["NetworkService"]),
         .library(
             name: "PresistenceService",
-            targets: ["PresistenceService"])
+            targets: ["PresistenceService"]),
+        .library(
+            name: "PlayerService",
+            targets: ["PlayerService"])
     ],
     dependencies: [
     ],
@@ -31,6 +34,10 @@ let package = Package(
             name: "PresistenceService",
             dependencies: []
         ),
+        .target(
+            name: "PlayerService",
+            dependencies: []
+        )
 //        .testTarget(
 //            name: "SongsListTests",
 //            dependencies: ["SongsList"]

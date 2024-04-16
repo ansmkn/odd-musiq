@@ -21,7 +21,8 @@ let package = Package(
                 .product(name: "Coordinator", package: "Core"),
                 .product(name: "Container", package: "Core"),
                 .product(name: "Router", package: "Services"),
-                .product(name: "UseCaseProtocol", package: "Domain")
+                .product(name: "UseCaseProtocol", package: "Domain"),
+                .product(name: "PlayerService", package: "Services")
             ],
             resources: [
                 .process("Resources")

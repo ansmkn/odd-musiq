@@ -12,7 +12,7 @@ class ProvidedFont {
         self.size = size
     }
     
-    func font() -> SwiftUI.Font {
+    var font: SwiftUI.Font {
         SwiftUI.Font.custom(name, size: size)
     }
 }

@@ -5,6 +5,8 @@ import SongsList
 import FeatureToggles
 import NetworkService
 import Environment
+import AVFoundation
+import PlayerService
 
 extension Assembler {
 
@@ -39,6 +41,10 @@ extension Assembler {
 
             container.register(NetworkServiceProtocol.self) { container in
                 NetworkService(configuration: container.resolve()!)
+            }
+            
+            container.register(PlayerServiceProtocol.self) { container in
+                PlayerService(avPlayer: AVPlayer())
             }
         }
     }

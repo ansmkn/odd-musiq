@@ -34,7 +34,7 @@ class SongsListViewController: UITableViewController, SongsListViewInput {
         viewModel.onWillAppear()
     }
     
-    func render(state: SongsListViewModel.State) {
+    func render(state: SongsListViewModel.ViewState) {
         LegacyActivityIndicatorView.hide()
         switch state {
         case .error(let error):
@@ -62,7 +62,18 @@ class SongsListViewController: UITableViewController, SongsListViewInput {
         let item = viewModel.items[indexPath.row]
         cell.songTitleLabel.text = item.song.name
         cell.statusView.configure(with: item.status)
+        
+        cell.progressCancellable = viewModel.interactor?.activeLoadings[item.song.id]?
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak cell] progress in
+                cell?.statusView.progressView.setProgress(with: CGFloat(progress))
+            })
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.onSelectItem(at: indexPath.row)
     }
     
     // MARK: - Delegate

@@ -12,13 +12,21 @@ public class SongsListAssembly: ContainerAssembly {
             SongsListCoordinator(container: container)
         }
         
+        container.register(SongsListInteractor.self) { container in
+            SongsListInteractor(songsUseCase: container.resolve()!,
+                                playerService: container.resolve()!,
+                                downloadedSongsUseCase: container.resolve()!,
+                                loadAudioUseCase: container.resolve()!)
+        }
+        
         container.register(SongsListViewModel.self) { container in
-            SongsListViewModel(songsUseCase: container.resolve()!)
+            // TODO: Some type miscast occured when trying to infer optional type. Do not use force in cases like this.
+            SongsListViewModel(interactor: container.resolve())
         }
         
         if modernUI {
-            container.register(SongsListViewInput.self) { _ in
-                SongsListViewHosting()
+            container.register(SongsListViewInput.self) { container in
+                SongsListViewHosting(container: container)
             }
         } else {
             #if canImport(UIKit)

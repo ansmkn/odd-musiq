@@ -8,5 +8,9 @@ public class RepositoriesAssembly: ContainerAssembly {
         container.register(SongsRepositoryProtocol.self) { container in
             SongsRepository(networkService: container.resolve()!)
         }
+        
+        container.register(SongsAudioRepositoryProtocol.self) { container in
+            SongsAudioRepository(networkService: container.resolve()!)
+        }
     }
 }

@@ -1,5 +1,6 @@
 #if canImport(UIKit)
 import UIKit
+import Combine
 
 class LegacySongViewStatusView: UIView {
     

@@ -16,17 +16,16 @@ public class CocoaRouter: Router {
     }
     
     public func route(to destination: any Destination) {
-        guard let destination = destination as? SwiftUIDestination else {
+        guard let destination = destination as? SwiftUIDestination, let window else {
             fatalError()
         }
         let rootView = destination.view()
-        window?.contentView = NSHostingView(rootView: AnyView(rootView))
+        window.contentView = NSHostingView(
+            rootView: AnyView(rootView)
+                .frame(width: 375, height: 667) // dummy screen size fix
+        )
     }
-    
-//    public func route(to destination: any SwiftUIDestination) {
-//        let rootView = destination.view()
-//        window?.contentView = NSHostingView(rootView: AnyView(rootView))
-//    }
+
 }
 
 #endif

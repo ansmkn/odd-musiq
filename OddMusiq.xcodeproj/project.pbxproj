@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F901E0B32BCD5EB4006DCD35 /* PlayerService in Frameworks */ = {isa = PBXBuildFile; productRef = F901E0B22BCD5EB4006DCD35 /* PlayerService */; };
 		F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */ = {isa = PBXBuildFile; productRef = F9080C432BC66A9F00B10C3A /* UseCases */; };
 		F9618ADE2BCA93230003F5EE /* SongsList in Frameworks */ = {isa = PBXBuildFile; productRef = F9618ADD2BCA93230003F5EE /* SongsList */; };
 		F98112532BC847540017DC17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98112522BC847540017DC17 /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 				F9ABD4FA2BC683E7003ACD19 /* Repositories in Frameworks */,
 				F9080C442BC66A9F00B10C3A /* UseCases in Frameworks */,
 				F98112962BC9C72E0017DC17 /* FeatureToggles in Frameworks */,
+				F901E0B32BCD5EB4006DCD35 /* PlayerService in Frameworks */,
 				F9EFC3632BC66E2600D5D7EA /* Entities in Frameworks */,
 				F9EFC3672BC66E2600D5D7EA /* UseCaseProtocol in Frameworks */,
 				F9EFC3652BC66E2600D5D7EA /* RepositoryProtocol in Frameworks */,
@@ -197,6 +199,7 @@
 				F9ABD4F92BC683E7003ACD19 /* Repositories */,
 				F98112952BC9C72E0017DC17 /* FeatureToggles */,
 				F9618ADD2BCA93230003F5EE /* SongsList */,
+				F901E0B22BCD5EB4006DCD35 /* PlayerService */,
 			);
 			productName = OddMusiq;
 			productReference = F9BA66772BC588CE00EC7305 /* OddMusiq.app */;
@@ -690,6 +693,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F901E0B22BCD5EB4006DCD35 /* PlayerService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlayerService;
+		};
 		F9080C432BC66A9F00B10C3A /* UseCases */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UseCases;

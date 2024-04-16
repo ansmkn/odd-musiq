@@ -8,5 +8,14 @@ public class UseCasesAssembly: ContainerAssembly {
         container.register(SongsUseCaseProtocol.self) { container in
             SongsUseCase(repository: container.resolve()!)
         }
+        
+        container.register(DownloadSongAudioUseCaseProtocol.self) { container in
+            DownloadSongAudioUseCase(repository: container.resolve()!)
+        }
+        
+        container.register(DownloadedSongsUseCaseProtocol.self) { container in
+            DownloadedSongsUseCase(repository: container.resolve()!)
+        }
+
     }
 }

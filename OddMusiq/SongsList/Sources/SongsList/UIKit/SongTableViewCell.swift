@@ -1,6 +1,9 @@
+#if canImport(UIKit)
 import UIKit
+import Combine
 
 class SongTableViewCell: UITableViewCell {
+    var progressCancellable: AnyCancellable?
     
     lazy var statusView: LegacySongViewStatusView = {
         let view = LegacySongViewStatusView()
@@ -63,4 +66,12 @@ class SongTableViewCell: UITableViewCell {
         super.layoutSubviews()
         containerView.layer.cornerRadius = 8
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        progressCancellable?.cancel()
+        statusView.progressView.setProgress(with: 0)
+    }
 }
+
+#endif

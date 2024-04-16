@@ -11,7 +11,7 @@ public final class SongsRepository: SongsRepositoryProtocol {
     }
 
     public func songs(onlyCached: Bool) async throws -> [Song] {
-        try await networkService.perform(query: SongsRequest(onlyCached: onlyCached)).data
+        try await networkService.perform(request: SongsRequest(onlyCached: onlyCached)).data
     }
 }
 
