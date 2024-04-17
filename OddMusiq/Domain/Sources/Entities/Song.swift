@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Song: Decodable {
+public struct Song: Decodable, Hashable, Equatable {
     public typealias Identity = String
     public var id: Identity
     public var name: String

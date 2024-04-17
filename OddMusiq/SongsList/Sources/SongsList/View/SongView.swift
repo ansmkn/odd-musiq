@@ -2,12 +2,13 @@ import SwiftUI
 import Combine
 
 struct SongView: View {
-    var state: SongViewState
+    var title: String
+    var status: SongViewStatus
     var progressSubject: AnyPublisher<Float, Never>?
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(state.song.name)
+            Text(title)
                 .font(Fonts.primary.font)
                 .lineLimit(2)
                 .foregroundColor(Colors.primaryForeground.color)
@@ -15,7 +16,7 @@ struct SongView: View {
                 .padding(.horizontal, 12)
             HStack {
                 Spacer()
-                SongStatusView(status: state.status, progressSubject: progressSubject)
+                SongStatusView(status: status, progressSubject: progressSubject)
             }
             .padding(.trailing, 8)
             .padding(.bottom, 8)
@@ -29,6 +30,6 @@ struct SongView: View {
 }
 
 #Preview {
-    SongView(state: .template(title: "How could you babe multiline asdf adsfasdf asdf asdf ", status: .loading(0.3)))
+    SongView(title: "How could you babe", status: .loading(0.3))
         .frame(width: 320)
 }

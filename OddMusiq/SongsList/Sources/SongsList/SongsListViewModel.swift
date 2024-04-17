@@ -15,6 +15,7 @@ class SongsListViewModel: ObservableObject {
         self.items = items
         self.state = state
         self.interactor = interactor
+        interactor?.viewModel = self
     }
     
     enum ViewState {
@@ -23,16 +24,17 @@ class SongsListViewModel: ObservableObject {
         case loading
     }
     
+    /// this holds all the logic and responsible for any mutations of the state. Could be nill for Preview stage
     var interactor: SongsListInteractor?
     
     @MainActor
     func onWillAppear() {
-        interactor?.onWillAppear(viewModel: self)
+        interactor?.onWillAppear()
     }
     
     @MainActor
     func onSelectItem(at index: Int) {
-        interactor?.onSelectItem(at: index, viewModel: self)
+        interactor?.onSelectItem(at: index)
     }
 }
 
@@ -58,6 +60,7 @@ class SongsListInteractor {
     var downloadedAudioUseCase: DownloadedSongsUseCaseProtocol
     var loadAudioUseCase: DownloadSongAudioUseCaseProtocol
     var playerService: PlayerServiceProtocol
+    weak var viewModel: SongsListViewModel!
 
     init(songsUseCase: SongsUseCaseProtocol,
          playerService: PlayerServiceProtocol,
@@ -72,7 +75,8 @@ class SongsListInteractor {
     var playingItem: SongViewState? {
         didSet {
             guard let downloadedSong = playingItem?.downloadedSong else {
-                fatalError("nothgin to play")
+                assertionFailure("there nothing to play")
+                return
             }
             if oldValue?.song.id == downloadedSong.id {
                 playerService.resume()
@@ -83,16 +87,16 @@ class SongsListInteractor {
     }
     
     @MainActor
-    func onWillAppear(viewModel: SongsListViewModel) {
+    func onWillAppear() {
         viewModel.state = .loading
         Task { @MainActor in
             do {
                 let cachedSongs = try? await songsUseCase.execute(cached: true)
-                viewModel.items = cachedSongs?.map { songViewState(for: $0, viewModel: viewModel) } ?? []
+                viewModel.items = cachedSongs?.map { songViewState(for: $0) } ?? []
                 viewModel.state = .songs
                 
                 let upstreamSongs = try await songsUseCase.execute(cached: false)
-                viewModel.items = upstreamSongs.map { songViewState(for: $0, viewModel: viewModel) }
+                viewModel.items = upstreamSongs.map { songViewState(for: $0) }
                 viewModel.state = .songs
             } catch let error {
                 viewModel.state = .error(error.localizedDescription)
@@ -101,7 +105,7 @@ class SongsListInteractor {
     }
     
     @MainActor
-    func onSelectItem(at index: Int, viewModel: SongsListViewModel) {
+    func onSelectItem(at index: Int) {
         let item = viewModel.items[index]
         if case .loading = item.status {
             return print("did select loading item")
@@ -125,7 +129,7 @@ class SongsListInteractor {
         viewModel.state = .songs
     }
     
-    private func songViewState(for song: Song, viewModel: SongsListViewModel) -> SongViewState {
+    private func songViewState(for song: Song) -> SongViewState {
         let state = SongViewState(song: song, status: .unloaded)
         if let playingItem, song.id == playingItem.song.id {
             state.status = .playing
@@ -145,7 +149,7 @@ class SongsListInteractor {
         Task { @MainActor in
             do {
                 let _ = try await self.loadAudioUseCase.execute(song: item.song, progress: progressSubject)
-                viewModel.items = viewModel.items.map { $0.song }.map { songViewState(for: $0, viewModel: viewModel) }
+                viewModel.items = viewModel.items.map { $0.song }.map { songViewState(for: $0) }
                 viewModel.state = .songs
             } catch let error {
                 item.status = .unloaded

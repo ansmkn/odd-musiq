@@ -2,8 +2,7 @@ import SwiftUI
 import Combine
 
 struct LoadingProgressView: View {
-    @State
-    var progress: Float
+    @State var progress: Float
     var progressSubject: AnyPublisher<Float, Never>
     
     init(progress: Float, progressSubject: AnyPublisher<Float, Never>? = nil) {
@@ -25,7 +24,6 @@ struct LoadingProgressView: View {
         .rotationEffect(.degrees(-90))
         .padding(4)
         .onReceive(progressSubject) { progress in
-            print("recieved progress, ", progress)
             self.progress = progress
         }
     }

@@ -5,29 +5,31 @@ import Router
 import Container
 
 struct SongsListView: View {
-
     @ObservedObject
     var viewModel: SongsListViewModel
     
     @State var errorMessage: String?
     @State var showingErrorAlert = false
     
-    func songView(at index: Int) -> SongView {
-        let item = viewModel.items[index]
+    func songView(at item: SongViewState) -> SongView {
         let subject = viewModel.loadingProcesses[item.song.id]?
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
         
-        return SongView(state: item, progressSubject: subject)
+        return SongView(title: item.song.name,
+                        status: item.status,
+                        progressSubject: subject)
     }
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 0) {
-                ForEach(viewModel.items.indices, id: \.self) { index in
-                    songView(at: index)
+                ForEach(viewModel.items, id: \.self.song.id) { item in
+                    songView(at: item)
                         .onTapGesture {
-                            viewModel.onSelectItem(at: index)
+                            if let index = viewModel.items.firstIndex(where: { $0.song.id == item.song.id }) {
+                                viewModel.onSelectItem(at: index)
+                            }
                         }
                 }
             }

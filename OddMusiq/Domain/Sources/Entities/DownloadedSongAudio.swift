@@ -1,6 +1,6 @@
 import Foundation
 
-public struct DownloadedSongAudio {
+public struct DownloadedSongAudio: Hashable, Equatable {
     public typealias FileURL = URL
     public var id: Song.Identity
     public var fileURL: FileURL
