@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build
         run: |
-          xcodebuild build-for-testing -scheme $SCHEME -project $PROJECT -destination $DESTINATION
+          xcodebuild build-for-testing -scheme "$SCHEME" -project "$PROJECT" -destination "$DESTINATION"
       - name: Test
         run: |
-          xcodebuild test-without-building -scheme $SCHEME -project $PROJECT -destination $DESTINATION
+          xcodebuild test-without-building -scheme "$SCHEME" -project "$PROJECT" -destination "$DESTINATION"
