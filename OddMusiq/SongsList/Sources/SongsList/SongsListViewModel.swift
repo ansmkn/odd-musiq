@@ -8,6 +8,7 @@ class SongsListViewModel: ObservableObject {
     @Published var items: [SongViewState]
     @Published var state: ViewState
     /// Represents active loading bages with process. Only for observation.
+    @Published
     var loadingProcesses: [Song.Identity: CurrentValueSubject<Float, Never>] = [:]
     
     init(items: [SongViewState] = [], state: ViewState = .loading, interactor: SongsListInteractor? = nil) {
@@ -67,8 +68,6 @@ class SongsListInteractor {
         self.downloadedAudioUseCase = downloadedSongsUseCase
         self.loadAudioUseCase = loadAudioUseCase
     }
-    
-    var activeLoadings: [Song.Identity: CurrentValueSubject<Float, Never>] = [:]
 
     var playingItem: SongViewState? {
         didSet {
@@ -89,11 +88,11 @@ class SongsListInteractor {
         Task { @MainActor in
             do {
                 let cachedSongs = try? await songsUseCase.execute(cached: true)
-                viewModel.items = cachedSongs?.map { songViewState(for: $0) } ?? []
+                viewModel.items = cachedSongs?.map { songViewState(for: $0, viewModel: viewModel) } ?? []
                 viewModel.state = .songs
                 
                 let upstreamSongs = try await songsUseCase.execute(cached: false)
-                viewModel.items = upstreamSongs.map { songViewState(for: $0) }
+                viewModel.items = upstreamSongs.map { songViewState(for: $0, viewModel: viewModel) }
                 viewModel.state = .songs
             } catch let error {
                 viewModel.state = .error(error.localizedDescription)
@@ -126,14 +125,14 @@ class SongsListInteractor {
         viewModel.state = .songs
     }
     
-    private func songViewState(for song: Song) -> SongViewState {
+    private func songViewState(for song: Song, viewModel: SongsListViewModel) -> SongViewState {
         let state = SongViewState(song: song, status: .unloaded)
         if let playingItem, song.id == playingItem.song.id {
             state.status = .playing
         } else if let downloadedSong = self.downloadedAudioUseCase.execute(songId: song.id) {
             state.downloadedSong = downloadedSong
             state.status = .paused
-        } else if let progress = activeLoadings[song.id] {
+        } else if let progress = viewModel.loadingProcesses[song.id] {
             state.status = .loading(progress.value)
         } else {
             state.status = .unloaded
@@ -146,17 +145,16 @@ class SongsListInteractor {
         Task { @MainActor in
             do {
                 let _ = try await self.loadAudioUseCase.execute(song: item.song, progress: progressSubject)
-                viewModel.items = viewModel.items.map { $0.song }.map { songViewState(for: $0) }
+                viewModel.items = viewModel.items.map { $0.song }.map { songViewState(for: $0, viewModel: viewModel) }
                 viewModel.state = .songs
             } catch let error {
                 item.status = .unloaded
                 viewModel.state = .error(error.localizedDescription)
                 print("loading of audio finished with error: \(error)")
             }
-            self.activeLoadings[item.song.id] = nil
+            viewModel.loadingProcesses[item.song.id] = nil
         }
-
-        self.activeLoadings[item.song.id] = progressSubject
+        viewModel.loadingProcesses[item.song.id] = progressSubject
     }
 }
 

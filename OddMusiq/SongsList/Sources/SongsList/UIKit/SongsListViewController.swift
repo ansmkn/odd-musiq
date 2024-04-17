@@ -63,7 +63,7 @@ class SongsListViewController: UITableViewController, SongsListViewInput {
         cell.songTitleLabel.text = item.song.name
         cell.statusView.configure(with: item.status)
         
-        cell.progressCancellable = viewModel.interactor?.activeLoadings[item.song.id]?
+        cell.progressCancellable = viewModel.loadingProcesses[item.song.id]?
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak cell] progress in
                 cell?.statusView.progressView.setProgress(with: CGFloat(progress))

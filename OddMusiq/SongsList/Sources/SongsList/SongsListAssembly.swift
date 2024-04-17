@@ -20,7 +20,7 @@ public class SongsListAssembly: ContainerAssembly {
         }
         
         container.register(SongsListViewModel.self) { container in
-            // TODO: Some type miscast occured when trying to infer optional type. Do not use force in cases like this.
+            // TODO: Some type miscast occured when inferring optional type. Do not use force unwrapping in cases like this.
             SongsListViewModel(interactor: container.resolve())
         }
         
