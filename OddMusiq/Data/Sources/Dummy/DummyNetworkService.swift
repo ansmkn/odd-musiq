@@ -25,7 +25,7 @@ public class DummyNetworkService: NetworkServiceProtocol {
     }
     
     public func loadFile<T>(request: T, progress: ProgressCallback?) async throws -> URL where T : DownloadDataRequest {
-        fatalError()
+        fatalError("not supported for stubs")
     }
     
     
