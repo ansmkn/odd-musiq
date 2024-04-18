@@ -65,7 +65,7 @@ platform :ios do
     # add_git_tag
     # push_to_git_remote
     reset_git_repo(skip_clean: true)
-    clean_build_artifacts
+    # clean_build_artifacts 
   end
   
   desc "Run test"

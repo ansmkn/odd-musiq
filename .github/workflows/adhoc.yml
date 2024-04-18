@@ -29,25 +29,15 @@ jobs:
             bundle exec fastlane adhoc
           fi
 
-      - name: Set filenames
-        run: |
-          echo "ipa_filename=${{ env.output_name }}.ipa" >> $GITHUB_ENV
-          echo "dsyms_filename=${{ env.output_name }}.app.dSYM.zip" >> $GITHUB_ENV
-
-      - name: Set paths
-        run: |
-          echo "ipa_path=${{ github.workspace }}/${{ env.ipa_filename }}" >> $GITHUB_ENV
-          echo "dsyms_path=${{ github.workspace }}/${{ env.dsyms_filename }}" >> $GITHUB_ENV
-
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.ipa_filename }}
-          path: ${{ env.ipa_path }}
+          name: OddMusiq.ipa
+          path: ${{ github.workspace }}/build/artifacts/OddMusiq.ipa
 
       - name: Upload dSYMs artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.dsyms_filename }}
-          path: ${{ env.dsyms_path }}
+          name: OddMusiq.app.dSYM.zip
+          path: ${{ github.workspace }}/build/artifacts/OddMusiq.app.dSYM.zip
 
