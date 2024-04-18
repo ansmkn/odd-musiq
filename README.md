@@ -1,15 +1,13 @@
 # odd-musiq
 This project was created for demonstrative purposes
 
-
 # List of possible options?
-Focus on scalability. No dependencies
+Focus on scalability. No dependencies (except Fastlane)
 
 ### Feature List
 - [ ] Background Downloading
 - [ ] Partial Downloading
-- [ ] UIKit/SwiftUI replacement
-- [ ] Credentials (enabled of disabled)
+- [x] UIKit/SwiftUI replacement
 - [ ] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
 - [ ] MetricKit
@@ -17,30 +15,31 @@ Focus on scalability. No dependencies
 - [ ] Localization
 
 ### Achitecture Capabilities
-- [ ] Clean Arch
-- [ ] Multimodular: Domain/Core/Repository/App/FeatureToggles
-- [ ] Own simpliest DI container
-- [ ] UI as plugin:
-- [ ] UIKit
-- [ ] SwiftUI
+- [x] Clean Arch
+- [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
+- [x] Own simpliest DI container
+- [x] UI as plugin:
+- [x] UIKit
+- [x] SwiftUI
 - [ ] UITesting
-- [ ] Repository as Plugin
+- [x] Repository as Plugin
 - [ ] Fetching the domain list creditials (empty/anonymous)
 - [ ] Parsing different scheme formats
 - [ ] Parsing different audio formats
 - [ ] Different persistent technics (disk/icloud/secured?)
-- [ ] Domain Unit tests
-- [ ] Coordinator Pattern
+- [x] Domain Unit tests
+- [x] Coordinator Pattern
 
 ### Project Infrastructure
 - [x] SPM
 - [ ] SPM plugin for decoding the resource file as argument from $SECRET
-- [ ] Platform iOS/macOS/ipadOS?
+- [x] Platform iOS/macOS/ipadOS?
 - [ ] Distribution metadata as a code
-- [ ] Github actions
+- [x] Github actions
 - [ ] Codesigning via `security`
-- [ ] uploading artifacts
-- [ ] Fastlane swift (optional)
-- [ ] Uploading to appstore
-- [ ] Run tests
-- [ ] Uploading Ad Hoc builds (where??)
+- [x] uploading artifacts
+- [x] Fastlane swift (optional)
+- [x] Uploading to appstore
+- [x] Run tests
+- [x] Uploading Ad Hoc builds (where??)
+- [ ] Crossplatform CI/CD
