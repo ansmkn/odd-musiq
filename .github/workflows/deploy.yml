@@ -1,8 +1,24 @@
-name: Deploy
+name: Manual Deploy
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      destination:
+        description: 'Destribution destination'
+        required: true
+        default: 'adhoc'
+        type: choice
+        options:
+        - appstore
+        - adhoc
+      environment:
+        description: 'Environment of the app'
+        type: choice
+        required: true
+        default: 'sandbox'
+        options:
+        - sandbox
+        - production
 
 jobs:
   build_with_signing:
