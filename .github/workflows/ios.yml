@@ -1,10 +1,7 @@
-name: iOS starter workflow
+name: iOS Tests
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 env:
   SCHEME: "OddMusiq"

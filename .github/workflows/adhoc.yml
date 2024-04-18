@@ -1,0 +1,48 @@
+name: Ad Hoc Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
+  workflow_dispatch:
+    inputs:
+      app-environment:
+        description: 'App Environment'
+        required: true
+        default: 'sandbox'
+        type: choice
+        options:
+        - sandbox
+        - production
+
+jobs:
+  adhoc-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Prepare fastlane
+        run: bundle install
+      - name: Archive and upload the app
+        run: |
+          if [[ -n "${{ github.event.inputs.app-environment }}" ]]; then
+            bundle exec fastlane adhoc env:${{ github.event.inputs.app-environment }}
+          else
+            bundle exec fastlane adhoc
+          fi
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OddMusiq.ipa
+          path: ${{ github.workspace }}/build/artifacts/OddMusiq.ipa
+
+      - name: Upload dSYMs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OddMusiq.app.dSYM.zip
+          path: ${{ github.workspace }}/build/artifacts/OddMusiq.app.dSYM.zip
+      - name: Remove build folder
+        run: |
+          rm -rf ${{ github.workspace }}/build
