@@ -1,0 +1,54 @@
+name: Ad Hoc Deploy
+
+on:
+  branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      app-environment:
+        description: 'App Environment'
+        required: true
+        default: 'sandbox'
+        type: choice
+        options:
+        - sandbox
+        - production
+
+jobs:
+  adhoc:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Prepare fastlane
+        run: bundle install
+      - name: Archive and upload the app
+        run: |
+          if [[ -n "${{ github.event.inputs.app-environment }}" ]]; then
+            bundle exec fastlane adhoc env:${{ github.event.inputs.app-environment }}
+          else
+            bundle exec fastlane adhoc
+          fi
+
+      - name: Set filenames
+        run: |
+          echo "ipa_filename=${{ env.output_name }}.ipa" >> $GITHUB_ENV
+          echo "dsyms_filename=${{ env.output_name }}.app.dSYM.zip" >> $GITHUB_ENV
+
+      - name: Set paths
+        run: |
+          echo "ipa_path=${{ github.workspace }}/${{ env.ipa_filename }}" >> $GITHUB_ENV
+          echo "dsyms_path=${{ github.workspace }}/${{ env.dsyms_filename }}" >> $GITHUB_ENV
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ipa_filename }}
+          path: ${{ env.ipa_path }}
+
+      - name: Upload dSYMs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.dsyms_filename }}
+          path: ${{ env.dsyms_path }}
+
