@@ -1,0 +1,28 @@
+name: Test Flight Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      app-environment:
+        description: 'App Environment'
+        required: true
+        default: 'sandbox'
+        type: choice
+        options:
+        - sandbox
+        - production
+
+jobs:
+  testflight-deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Prepare fastlane
+        run: bundle install
+      - name: Archive and upload the app
+        run: |
+          if [[ -n "${{ github.event.inputs.app-environment }}" ]]; then
+            bundle exec fastlane beta env:${{ github.event.inputs.app-environment }}
+          else
+            bundle exec fastlane beta
+          fi
