@@ -15,14 +15,21 @@
 
 default_platform(:ios)
 
+ARTIFACTS_PATH = "./build/artifacts/"
+
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
     ensure_git_status_clean
     increment_build_number(xcodeproj: "OddMusiq.xcodeproj")
 
-
-    build_app(scheme: "OddMusiq")
+    build_app(
+      configuration: "Release",
+      clean: true,
+      xcargs: "-skipPackagePluginValidation -allowProvisioningUpdates OTHER_SWIFT_FLAGS='$(inherited) -D INTERNAL_BUILD'",
+      scheme: "OddMusiq",
+      output_directory: ARTIFACTS_PATH,
+    )
     
     api_key = app_store_connect_api_key(
       key_id: "5U3LUYFKQY",
@@ -35,7 +42,6 @@ platform :ios do
       skip_waiting_for_build_processing: true
     )
 
-    commit_version_bump(xcodeproj: "OddMusiq.xcodeproj")
     add_git_tag
     push_to_git_remote
     reset_git_repo(skip_clean: true)
