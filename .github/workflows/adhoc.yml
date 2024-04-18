@@ -1,7 +1,10 @@
 name: Ad Hoc Deploy
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/**'
   workflow_dispatch:
     inputs:
       app-environment:
@@ -40,4 +43,6 @@ jobs:
         with:
           name: OddMusiq.app.dSYM.zip
           path: ${{ github.workspace }}/build/artifacts/OddMusiq.app.dSYM.zip
-
+      - name: Remove build folder
+        run: |
+          rm -rf ${{ github.workspace }}/build
