@@ -1,7 +1,6 @@
 name: Ad Hoc Deploy
 
 on:
-  branches: [ "main" ]
   workflow_dispatch:
     inputs:
       app-environment:
@@ -14,9 +13,8 @@ on:
         - production
 
 jobs:
-  adhoc:
+  adhoc-deploy:
     runs-on: self-hosted
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
