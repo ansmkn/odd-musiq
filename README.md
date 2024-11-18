@@ -10,7 +10,6 @@ Focus on scalability. No dependencies (except Fastlane)
 - [x] UIKit/SwiftUI replacement
 - [ ] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
-- [ ] MetricKit
 - [ ] Song Detail Screen
 - [ ] Localization
 
