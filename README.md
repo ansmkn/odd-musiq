@@ -36,7 +36,6 @@ Focus on scalability. No dependencies (except Fastlane)
 - [ ] Distribution metadata as a code
 - [x] Github actions
 - [ ] Codesigning via `security`
-- [x] uploading artifacts
 - [x] Fastlane swift (optional)
 - [x] Uploading to appstore
 - [x] Run tests
