@@ -42,3 +42,4 @@ Focus on scalability. No dependencies (except Fastlane)
 - [x] Run tests
 - [x] Uploading Ad Hoc builds (where??)
 - [ ] Crossplatform CI/CD
+- [ ] XCMetrics
