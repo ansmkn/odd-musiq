@@ -6,7 +6,6 @@ Focus on scalability. No dependencies (except Fastlane)
 
 ### Feature List
 - [ ] Background Downloading
-- [ ] Partial Downloading
 - [x] UIKit/SwiftUI replacement
 - [ ] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
