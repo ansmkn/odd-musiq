@@ -22,7 +22,6 @@ Focus on scalability. No dependencies (except Fastlane)
 - [ ] UITesting
 - [x] Repository as Plugin
 - [ ] Fetching the domain list creditials (empty/anonymous)
-- [ ] Parsing different scheme formats
 - [ ] Parsing different audio formats
 - [ ] Different persistent technics (disk/icloud/secured?)
 - [x] Domain Unit tests
