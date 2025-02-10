@@ -1,7 +1,7 @@
 # odd-musiq
 This project was created for demonstrative purposes
 
-# List of possible options?
+## List of possible options?
 Focus on scalability. No dependencies (except Fastlane)
 
 ## Feature List
