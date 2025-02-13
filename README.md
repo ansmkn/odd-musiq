@@ -12,7 +12,7 @@ Focus on scalability. No dependencies (except Fastlane)
 - [ ] Song Detail Screen
 - [ ] Localization
 
-## Arrchitecture Capabilities
+## Architecture Capabilities
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
