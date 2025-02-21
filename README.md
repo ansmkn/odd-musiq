@@ -39,4 +39,4 @@ Focus on scalability. No dependencies (except Fastlane)
 - [x] Uploading to appstore
 - [x] Run tests
 - [x] Uploading Ad Hoc builds (where??)
-- [ ] Crossplatform CI/CD
+- [ ] Macos Crossplatform CI/CD
