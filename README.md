@@ -7,7 +7,7 @@ Focus on scalability. No dependencies (except Fastlane)
 ## Feature List
 - [ ] Background Downloading
 - [x] UIKit/SwiftUI replacement
-- [ ] Analytics
+- [x] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
 - [ ] Song Detail Screen
 - [ ] Localization
