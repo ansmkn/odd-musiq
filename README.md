@@ -27,7 +27,7 @@ Focus on scalability. No dependencies (except Fastlane)
 - [x] Domain Unit tests
 - [x] Coordinator Pattern
 
-### Project Infra
+### Project Infrastructure
 - [x] SPM
 - [ ] SPM plugin for decoding the resource file as argument from $SECRET
 - [x] Platform iOS/macOS/ipadOS?
