@@ -11,7 +11,6 @@ Focus on scalability. No dependencies (except Fastlane)
 - [ ] Crashlogs (diagnosis) sending feature list
 - [ ] Song Detail Screen
 - [ ] Localization
-
 ## Architecture
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
