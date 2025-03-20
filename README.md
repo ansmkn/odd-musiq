@@ -1,9 +1,6 @@
 # odd-musiq
 This project was created for demo
 
-## List of possible options?
-Focus on scalability. No dependencies (except Fastlane)
-
 ## Feature List
 - [ ] Background Downloading
 - [x] UIKit/SwiftUI replacement
