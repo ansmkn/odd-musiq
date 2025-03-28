@@ -9,6 +9,7 @@ This project was created for demo
 - [ ] Song Detail Screen
 - [ ] Localization
 ## Architecture
+
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
