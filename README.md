@@ -7,6 +7,7 @@ This project was created for demo
 - [ ] Analytics
 - [ ] Crashlogs (diagnosis) sending feature list
 - [ ] Song Detail Screen
+
 ## Architecture
 
 
