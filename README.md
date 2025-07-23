@@ -1,5 +1,5 @@
 # odd-musiq
-This project was created for demo
+This project was created for experiments
 
 ## Feature List
 - [ ] Background Downloading
