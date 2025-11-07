@@ -10,7 +10,6 @@ This project was created for experiments
 
 ## Architecture
 
-
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
