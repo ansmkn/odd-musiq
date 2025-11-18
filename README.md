@@ -14,7 +14,7 @@ This project was created for experiments
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
 - [x] UI as plugin:
-- [x] UIKit
+- [ ] UIKit
 - [x] SwiftUI
 - [x] Repository as Plugin
 - [ ] Fetching the domain list creditials (empty/anonymous)
