@@ -16,7 +16,6 @@ This project was created for experiments
 - [x] UI as plugin:
 - [x] UIKit
 - [x] SwiftUI
-- [ ] UITesting
 - [x] Repository as Plugin
 - [ ] Fetching the domain list creditials (empty/anonymous)
 - [ ] Parsing different audio formats
