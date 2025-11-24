@@ -9,7 +9,7 @@ This project was created for demo
 - [ ] Song Detail Screen
 
 ## Architecture
-- [x] D2
+- [x] E1
 
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
