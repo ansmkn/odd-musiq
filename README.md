@@ -1,5 +1,5 @@
 # odd-musiq
-This project was created for experiments
+This project was created for demo
 
 ## Feature List
 - [ ] Background Downloading
@@ -9,13 +9,15 @@ This project was created for experiments
 - [ ] Song Detail Screen
 
 ## Architecture
+- [x] C3
 
 - [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
 - [x] UI as plugin:
-- [ ] UIKit
+- [x] UIKit
 - [x] SwiftUI
+- [ ] UITesting
 - [x] Repository as Plugin
 - [ ] Fetching the domain list creditials (empty/anonymous)
 - [ ] Parsing different audio formats
