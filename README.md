@@ -11,7 +11,6 @@ This project was created for demo
 ## Architecture
 
 - [x] D2
-- [x] Clean Arch
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
 - [x] UI as plugin:
