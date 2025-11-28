@@ -13,7 +13,7 @@ This project was created for demo
 - [x] Multimodular: Domain/Core/Repository/App/FeatureToggles
 - [x] Own simpliest DI container
 - [x] UI as plugin:
-- [x] UIKit
+- [ ] UIKit
 - [x] SwiftUI
 - [ ] UITesting
 - [x] Repository as Plugin
