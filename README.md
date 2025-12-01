@@ -23,6 +23,7 @@ This project was created for demo
 - [ ] Different persistent technics (disk/icloud/secured?)
 - [x] Domain Unit tests
 - [x] Coordinator Pattern
+- [o] Commit a
 
 ### Project Infrastructure
 - [ ] SPM plugin for decoding the resource file as argument from $SECRET
