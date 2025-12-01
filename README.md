@@ -25,7 +25,6 @@ This project was created for demo
 - [x] Coordinator Pattern
 
 ### Project Infrastructure
-- [x] SPM
 - [ ] SPM plugin for decoding the resource file as argument from $SECRET
 - [x] Platform iOS/macOS/ipadOS?
 - [ ] Distribution metadata as a code
